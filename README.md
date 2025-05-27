@@ -18,6 +18,8 @@
 
 **LoRA**：train/llama3_lora_sft.yaml，参考https://zhuanlan.zhihu.com/p/695287607
 
+**偏好数据**：data/rlhf.py
+
 **DPO**：train/llama3_lora_dpo.yaml，参考https://zhuanlan.zhihu.com/p/705068476
 
 **预测**：
@@ -25,6 +27,8 @@
 ```
 bash predict.sh
 ```
+
+**指标计算**：eval/eval.py
 
 ## 三、事件抽取演示系统设计与实现
 
