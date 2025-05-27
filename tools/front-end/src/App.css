@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Noticia+Text:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* 全局样式 */
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif; /* 更换为更现代的字体 */
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  border-radius: 20px; /* 增加圆角 */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1); /* 增强阴影效果 */
+  animation: fadeIn 0.5s ease-out; /* 增加淡入动画 */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 标题样式 */
+.headerText {
+  color: #2c3e50;
+  text-align: center;
+  font-size: 3em; /* 增大标题字体大小 */
+  margin-bottom: 30px;
+  font-weight: 700;
+  background: linear-gradient(120deg, #2c3e50, #3498db);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 增加文字阴影 */
+}
+
+.subheaderText {
+  font-family: 'Noticia Text';
+  font-weight: 400;
+  font-size: 22px; /* 增大副标题字体大小 */
+  text-align: center;
+  width: 70%; /* 增加宽度 */
+  margin: 0 auto;
+  color: #555; /* 调整文字颜色 */
+}
+
+.subsubheaderText {
+  font-family: 'Noticia Text';
+  font-weight: 400;
+  font-size: 20px; /* 增大次副标题字体大小 */
+  text-align: center;
+  width: 70%; /* 增加宽度 */
+  margin: 0 auto;
+  color: #666; /* 调整文字颜色 */
+}
+
+table {
+  font-family: 'Poppins', sans-serif; /* 更换为更现代的字体 */
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+}
+
+td {
+  background-color: #ffffff;
+  width: 50%;
+  height: 50px;
+  text-align: center;
+}
+
+tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+tr:first-of-type {
+  border-top: 2px solid gray;
+}
+
+tr:last-of-type {
+  border-bottom: 2px solid gray;
+}
+
+.opensourceText {
+  font-family: 'Noticia Text';
+  font-weight: 400;
+  font-size: 16px; /* 增大开源文字字体大小 */
+  text-align: center;
+  width: 70%; /* 增加宽度 */
+  margin: 10px auto;
+  color: #777; /* 调整文字颜色 */
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* 输入区域样式 */
+.inputContainer {
+  display: flex;
+  gap: 10px;
+  margin: 25px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.searchBar {
+  padding: 15px 25px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 16px;
+  flex: 2; /* 增大 input 的长度 */
+  min-width: 300px; /* 增大最小宽度 */
+  max-width: 600px; /* 增大最大宽度 */
+  transition: all 0.3s ease;
+}
+
+.typeList {
+  padding: 15px 25px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 16px;
+  flex: 1; /* 缩小 typelist 的长度 */
+  min-width: 200px; /* 缩小最小宽度 */
+  max-width: 300px; /* 缩小最大宽度 */
+  transition: all 0.3s ease;
+}
+
+.searchBar:focus,
+.typeList:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 5px rgba(52, 152, 219, 0.15); /* 增强焦点阴影效果 */
+}
+
+/* 按钮样式 */
+.generateButton,
+.clearButton {
+  padding: 15px 30px; /* 增加内边距 */
+  border: none;
+  border-radius: 12px; /* 增加圆角 */
+  font-size: 16px; /* 增大字体大小 */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 增加阴影效果 */
+}
+
+.generateButton {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+}
+
+.clearButton {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+}
+
+.generateButton:hover {
+  transform: translateY(-3px); /* 增加悬停时的上移距离 */
+  box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3); /* 增强悬停时的阴影效果 */
+}
+
+.clearButton:hover {
+  transform: translateY(-3px); /* 增加悬停时的上移距离 */
+  box-shadow: 0 8px 20px rgba(231, 76, 60, 0.3); /* 增强悬停时的阴影效果 */
+}
+
+/* 语言选择区域 */
+form {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+input[type="radio"] {
+  appearance: none;
+  width: 22px; /* 增大单选框大小 */
+  height: 22px; /* 增大单选框大小 */
+  border: 2px solid #3498db;
+  border-radius: 50%;
+  margin-right: -5px;
+  position: relative;
+  top: 0px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+input[type="radio"]:checked {
+  background-color: #3498db;
+  box-shadow: 0 0 0 5px rgba(52, 152, 219, 0.15); /* 增强选中时的阴影效果 */
+}
+
+/* 结果容器样式 */
+.resultContainer {
+  display: flex;
+  gap: 30px;
+  margin: 30px 0;
+  background: #ffffff;
+  padding: 25px; /* 增加内边距 */
+  border-radius: 20px; /* 增加圆角 */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* 增强阴影效果 */
+}
+
+/* 图容器样式 */
+.graphContainer {
+  flex: 1;
+  min-width: 0;
+  background-color: #ffffff;
+  border-radius: 20px; /* 增加圆角 */
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* 增强阴影效果 */
+  height: 600px; /* 增加高度 */
+  transition: all 0.3s ease;
+}
+
+.graphContainer:hover {
+  transform: translateY(-5px); /* 增加悬停时的上移效果 */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* 增强悬停时的阴影效果 */
+}
+
+/* 表格容器样式 */
+.tableContainer {
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+}
+
+/* 表格基础样式 */
+.result-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0;
+  font-size: 16px; /* 增大表格字体大小 */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* 增强阴影效果 */
+  overflow: hidden;
+}
+
+.result-table thead tr {
+  background: linear-gradient(135deg, #cfffe2, #cfffe2);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  height: 50px; /* 增加表头高度 */
+}
+
+.result-table th,
+.result-table td {
+  padding: 0 20px; /* 增加内边距 */
+  text-align: center;
+  height: 50px; /* 增加单元格高度 */
+  line-height: 50px;
+}
+
+.result-table th {
+  font-weight: 600;
+}
+
+.result-table td {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.result-table tbody tr:hover {
+  background-color: #f8f9fa;
+  transform: scale(1.01); /* 增加悬停时的缩放效果 */
+  transition: all 0.3s ease;
+}
